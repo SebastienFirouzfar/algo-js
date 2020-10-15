@@ -6,8 +6,8 @@ class Circle {
     }
 
     move(xOffset, yOffset) {
-        this.xPost + xOffset; 
-        this.yPost + yOffset
+        this.xPost += xOffset; 
+        this.yPost += yOffset
     }
 
     get surface() {
