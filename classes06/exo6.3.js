@@ -20,9 +20,25 @@ class Rectangle {
     }
 }
 
+function NumberRandom(n){
+    return Math.floor(Math.random()* n ) + 1; 
+}
 
 let indice = 0;
-while (indice < 5) {
+let rectablesNumber = [];
+for(let indice = 1; indice <=20; indice++){
+    let rectangle = new Rectangle(NumberRandom(100), NumberRandom(100), NumberRandom(100),NumberRandom(100)); 
+    rectablesNumber.push(rectangle); 
+}
+
+for(let i = 0; i < rectablesNumber.length-1; i++){    
+    for(let j = i + 1; j < rectablesNumber.length; j++){
+        console.log(rectablesNumber[i].collides(rectablesNumber[j])); 
+    }
+}
+    
+/**
+ * while (indice < 5) {
     let aleatoire1 = Math.floor(Math.random() * 11);
     let aleatoire2 = Math.floor(Math.random() * 11);
     let aleatoire3 = Math.floor(Math.random() * 11);
@@ -38,4 +54,5 @@ while (indice < 5) {
     }
     indice++;
 }
+ */
 
