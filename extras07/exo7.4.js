@@ -5,8 +5,10 @@ let askArome;
 let removeArome;
 let addArome;
 let indice = 0;
+let number ;
 
-do {
+
+while (number != 4) {
     console.log('Hello! Welcome to the Pizza Flavors Manager.');
     console.log('Please choose your actions');
     console.log();
@@ -14,7 +16,7 @@ do {
     console.log('2 - Add a new pizza flavor');
     console.log('3 - Remove a pizza flavor')
     console.log('4 - Exit this program')
-    let number = parseInt(readlineSync.question("Entrer un numéro  : "));
+    number = parseInt(readlineSync.question("Entrer un numéro  : "));
     console.log();
 
     switch (number) {
@@ -30,28 +32,28 @@ do {
                 //pizzaSave = pizzaTab; sauvegarde la pizza pour la case 3 si le client souhaite effacé un arôme   
             }
             console.log(pizzaTab);
-            console.log(); 
+            console.log();
             break;
 
         case 3:
             for (let i = 0; i < pizzaTab.length; i++) {
                 console.log(pizzaTab);
-                removeArome =  parseInt(readlineSync.question("Enter your action s number "));
+                removeArome = parseInt(readlineSync.question("Enter your action s number "));
                 //pizzaTab.pop(pizzaTab[removeArome]);
-                pizzaTab.splice(removeArome - 1, 1); //compter à partir de 1 jusqu'à n 
+                pizzaTab.splice(removeArome - 1, 1); //compter à partir de 1 jusqu'à n POUR EFFACER UN AROME
                 console.log("Vous avez enlevé l arome numero " + removeArome);
                 console.log(pizzaTab);
+                break; 
             }
             break;
 
         case 4:
-            console.log("Au revoir ");
+            console.log("le client souhaite une pizza avec " + pizzaTab);
+            process.exit();
             break;
         default: console.log("Pizza vide ");
     }
+}
 
-} while (4);
-
-console.log("le client souhaite une pizza avec " + pizzaTab);
 
 
