@@ -7,3 +7,7 @@
   5. Les objects
   6. Les classes 
   7. Les extrats 
+  
+  ```Execution
+   Pour executer le programme faire node nomFicher.js
+```
